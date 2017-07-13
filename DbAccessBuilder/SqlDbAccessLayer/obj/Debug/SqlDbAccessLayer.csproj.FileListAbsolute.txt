@@ -1,0 +1,20 @@
+K:\DbAccessBuilder\SqlDbAccessLayer\bin\Debug\SqlDbAccessLayer.dll
+K:\DbAccessBuilder\SqlDbAccessLayer\bin\Debug\SqlDbAccessLayer.pdb
+K:\DbAccessBuilder\SqlDbAccessLayer\obj\Debug\SqlDbAccessLayer.csprojResolveAssemblyReference.cache
+K:\DbAccessBuilder\SqlDbAccessLayer\obj\Debug\SqlDbAccessLayer.dll
+K:\DbAccessBuilder\SqlDbAccessLayer\obj\Debug\SqlDbAccessLayer.pdb
+O:\DbAccessBuilder\SqlDbAccessLayer\bin\Debug\SqlDbAccessLayer.dll
+O:\DbAccessBuilder\SqlDbAccessLayer\bin\Debug\SqlDbAccessLayer.pdb
+O:\DbAccessBuilder\SqlDbAccessLayer\obj\Debug\SqlDbAccessLayer.csprojResolveAssemblyReference.cache
+O:\DbAccessBuilder\SqlDbAccessLayer\obj\Debug\SqlDbAccessLayer.dll
+O:\DbAccessBuilder\SqlDbAccessLayer\obj\Debug\SqlDbAccessLayer.pdb
+J:\DbAccessBuilder\SqlDbAccessLayer\bin\Debug\SqlDbAccessLayer.dll
+J:\DbAccessBuilder\SqlDbAccessLayer\bin\Debug\SqlDbAccessLayer.pdb
+J:\DbAccessBuilder\SqlDbAccessLayer\obj\Debug\SqlDbAccessLayer.dll
+J:\DbAccessBuilder\SqlDbAccessLayer\obj\Debug\SqlDbAccessLayer.pdb
+J:\DbAccessBuilder\SqlDbAccessLayer\obj\Debug\SqlDbAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\jlucan\Visual Studio 2010\Projects\DbAccessBuilder\SqlDbAccessLayer\bin\Debug\SqlDbAccessLayer.dll
+C:\Users\jlucan\Visual Studio 2010\Projects\DbAccessBuilder\SqlDbAccessLayer\bin\Debug\SqlDbAccessLayer.pdb
+C:\Users\jlucan\Visual Studio 2010\Projects\DbAccessBuilder\SqlDbAccessLayer\obj\Debug\SqlDbAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\jlucan\Visual Studio 2010\Projects\DbAccessBuilder\SqlDbAccessLayer\obj\Debug\SqlDbAccessLayer.dll
+C:\Users\jlucan\Visual Studio 2010\Projects\DbAccessBuilder\SqlDbAccessLayer\obj\Debug\SqlDbAccessLayer.pdb

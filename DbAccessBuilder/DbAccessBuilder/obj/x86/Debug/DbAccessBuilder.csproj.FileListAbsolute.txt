@@ -1,0 +1,81 @@
+c:\users\jlucan\Visual Studio 2010\Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.MainForm.resources
+c:\users\jlucan\Visual Studio 2010\Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.Properties.Resources.resources
+c:\users\jlucan\Visual Studio 2010\Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.csproj.GenerateResource.Cache
+c:\users\jlucan\Visual Studio 2010\Projects\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.exe
+c:\users\jlucan\Visual Studio 2010\Projects\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.pdb
+c:\users\jlucan\Visual Studio 2010\Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.exe
+c:\users\jlucan\Visual Studio 2010\Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.pdb
+O:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.exe
+O:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.pdb
+O:\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.exe
+O:\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.pdb
+O:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.MainForm.resources
+O:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.Properties.Resources.resources
+O:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.csproj.GenerateResource.Cache
+K:\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.exe
+K:\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.pdb
+K:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.csprojResolveAssemblyReference.cache
+K:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.MainForm.resources
+K:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.Properties.Resources.resources
+K:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.csproj.GenerateResource.Cache
+K:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.exe
+K:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.pdb
+O:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.csprojResolveAssemblyReference.cache
+J:\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.exe
+J:\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.pdb
+J:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.MainForm.resources
+J:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.Properties.Resources.resources
+J:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.csproj.GenerateResource.Cache
+J:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.exe
+J:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.pdb
+J:\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.csprojResolveAssemblyReference.cache
+C:\Users\jlucan\Visual Studio 2010\Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.csprojResolveAssemblyReference.cache
+C:\Users\jlucan\_VS2010_Projects\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.exe
+C:\Users\jlucan\_VS2010_Projects\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.pdb
+C:\Users\jlucan\_VS2010_Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.csprojResolveAssemblyReference.cache
+C:\Users\jlucan\_VS2010_Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.MainForm.resources
+C:\Users\jlucan\_VS2010_Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.Properties.Resources.resources
+C:\Users\jlucan\_VS2010_Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.csproj.GenerateResource.Cache
+C:\Users\jlucan\_VS2010_Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.exe
+C:\Users\jlucan\_VS2010_Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.pdb
+C:\Users\jlucan\_VS2010_Projects\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.exe.manifest
+C:\Users\jlucan\_VS2010_Projects\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.application
+C:\Users\jlucan\_VS2010_Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.exe.manifest
+C:\Users\jlucan\_VS2010_Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.application
+C:\Users\jlucan\_VS2013_Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.MainForm.resources
+C:\Users\jlucan\_VS2013_Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.Properties.Resources.resources
+C:\Users\jlucan\_VS2013_Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.csproj.GenerateResource.Cache
+C:\Users\jlucan\_VS2013_Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.exe
+C:\Users\jlucan\_VS2013_Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.pdb
+C:\Users\jlucan\_VS2013_Projects\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.exe.manifest
+C:\Users\jlucan\_VS2013_Projects\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.application
+C:\Users\jlucan\_VS2013_Projects\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.exe
+C:\Users\jlucan\_VS2013_Projects\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.pdb
+C:\Users\jlucan\_VS2013_Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.exe.manifest
+C:\Users\jlucan\_VS2013_Projects\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.application
+U:\Jim Lucan\SuiteAmerica\SA_DataMigrationTools\DbAccessBuilder\DbAccessBuilder\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.exe
+U:\Jim Lucan\SuiteAmerica\SA_DataMigrationTools\DbAccessBuilder\DbAccessBuilder\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.pdb
+C:\Source\JimL\SuiteAmerica\DataMigration\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.exe
+C:\Source\JimL\SuiteAmerica\DataMigration\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.pdb
+C:\Source\JimL\SuiteAmerica\DataMigration\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.exe.manifest
+C:\Source\JimL\SuiteAmerica\DataMigration\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.application
+C:\Source\JimL\SuiteAmerica\DataMigration\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.exe
+C:\Source\JimL\SuiteAmerica\DataMigration\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.pdb
+C:\Source\JimL\SuiteAmerica\DataMigration\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.csprojResolveAssemblyReference.cache
+C:\Source\JimL\SuiteAmerica\DataMigration\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.MainForm.resources
+C:\Source\JimL\SuiteAmerica\DataMigration\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.Properties.Resources.resources
+C:\Source\JimL\SuiteAmerica\DataMigration\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.csproj.GenerateResource.Cache
+C:\Source\JimL\SuiteAmerica\DataMigration\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.exe.manifest
+C:\Source\JimL\SuiteAmerica\DataMigration\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.application
+C:\Users\jlucan\Documents\Visual Studio 2015\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.exe
+C:\Users\jlucan\Documents\Visual Studio 2015\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.pdb
+C:\Users\jlucan\Documents\Visual Studio 2015\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.exe.manifest
+C:\Users\jlucan\Documents\Visual Studio 2015\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.application
+C:\Users\jlucan\Documents\Visual Studio 2015\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.exe
+C:\Users\jlucan\Documents\Visual Studio 2015\DbAccessBuilder\DbAccessBuilder\bin\Debug\DbAccessBuilder.pdb
+C:\Users\jlucan\Documents\Visual Studio 2015\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.csprojResolveAssemblyReference.cache
+C:\Users\jlucan\Documents\Visual Studio 2015\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.MainForm.resources
+C:\Users\jlucan\Documents\Visual Studio 2015\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.Properties.Resources.resources
+C:\Users\jlucan\Documents\Visual Studio 2015\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.csproj.GenerateResource.Cache
+C:\Users\jlucan\Documents\Visual Studio 2015\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.exe.manifest
+C:\Users\jlucan\Documents\Visual Studio 2015\DbAccessBuilder\DbAccessBuilder\obj\x86\Debug\DbAccessBuilder.application

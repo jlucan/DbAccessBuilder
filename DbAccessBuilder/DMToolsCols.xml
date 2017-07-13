@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SqlInterfaceDefs DbServer="BRICK" DbName="SA_P2E">
+  <SqlInterface GetRowsProc="dbo.Get_SA_NewCustomers" DbRowsClassName="NewCustomers" DbRowClassName="NewCustomer" PrimaryTable="dbo.TempCustomer" InsertRowProc="InsertNewCustomer" DeleteRowProc="DeleteNewCustomer" GetRowsProcExists="T" InsertRowProcExists="F" DeleteRowProcExists="F">
+    <Column ColName="AcctNum" ColOrdinal="0" DataType="System.Int32" SqlType="int" Len="4" Nullable="F" IsPrKey="T" ColAttrib="PK" />
+    <Column ColName="CompanyName" ColOrdinal="1" DataType="System.String" SqlType="varchar" Len="60" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="BusinessName" ColOrdinal="2" DataType="System.String" SqlType="varchar" Len="60" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="Site" ColOrdinal="3" DataType="System.String" SqlType="varchar" Len="60" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="PersonalName" ColOrdinal="4" DataType="System.String" SqlType="varchar" Len="60" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="NewAddrInfo1" ColOrdinal="5" DataType="System.String" SqlType="varchar" Len="60" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="NewAddrInfo2" ColOrdinal="6" DataType="System.String" SqlType="varchar" Len="60" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="NewAddr1" ColOrdinal="7" DataType="System.String" SqlType="varchar" Len="50" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="NewAddr2" ColOrdinal="8" DataType="System.String" SqlType="varchar" Len="50" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="NewAddrMsg" ColOrdinal="9" DataType="System.String" SqlType="varchar" Len="100" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="NewCity" ColOrdinal="10" DataType="System.String" SqlType="varchar" Len="30" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="NewStateCode" ColOrdinal="11" DataType="System.String" SqlType="varchar" Len="2" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="NewZip" ColOrdinal="12" DataType="System.String" SqlType="varchar" Len="20" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="NewZipMsg" ColOrdinal="13" DataType="System.String" SqlType="varchar" Len="100" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="NewCountryCode" ColOrdinal="14" DataType="System.String" SqlType="varchar" Len="2" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="NewCountry" ColOrdinal="15" DataType="System.String" SqlType="varchar" Len="50" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="NewPhone" ColOrdinal="16" DataType="System.String" SqlType="varchar" Len="20" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="add1" ColOrdinal="17" DataType="System.String" SqlType="varchar" Len="30" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="add2" ColOrdinal="18" DataType="System.String" SqlType="varchar" Len="30" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="city" ColOrdinal="19" DataType="System.String" SqlType="varchar" Len="30" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="St" ColOrdinal="20" DataType="System.String" SqlType="varchar" Len="10" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="Zip" ColOrdinal="21" DataType="System.String" SqlType="varchar" Len="10" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="Country" ColOrdinal="22" DataType="System.String" SqlType="varchar" Len="20" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="Phone" ColOrdinal="23" DataType="System.String" SqlType="varchar" Len="12" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="AcctNumRefs" ColOrdinal="24" DataType="System.Int32" SqlType="int" Len="4" Nullable="F" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="NameRefs" ColOrdinal="25" DataType="System.Int32" SqlType="int" Len="4" Nullable="F" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="NameType" ColOrdinal="26" DataType="System.String" SqlType="varchar" Len="10" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+  </SqlInterface>
+  <SqlInterface GetRowsProc="dbo.GetUSCanStateCodes" DbRowsClassName="USCan_StateCodes" DbRowClassName="USCan_StateCode" PrimaryTable="dbo.USAndCanada_StateCodes" InsertRowProc="InsertUSCanStateCode" DeleteRowProc="DeleteUSCanStateCode" GetRowsProcExists="T" InsertRowProcExists="F" DeleteRowProcExists="F">
+    <Column ColName="Code" ColOrdinal="0" DataType="System.String" SqlType="char" Len="2" Nullable="F" IsPrKey="T" ColAttrib="PK" />
+    <Column ColName="Name" ColOrdinal="1" DataType="System.String" SqlType="varchar" Len="60" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="CountryCode" ColOrdinal="2" DataType="System.String" SqlType="varchar" Len="2" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+  </SqlInterface>
+  <SqlInterface GetRowsProc="dbo.GetCountryCodes" DbRowsClassName="CountryCodes" DbRowClassName="CountryCode" PrimaryTable="dbo.CountryCodes" InsertRowProc="InsertCountryCode" DeleteRowProc="DeleteCountryCode" GetRowsProcExists="T" InsertRowProcExists="F" DeleteRowProcExists="F">
+    <Column ColName="Code" ColOrdinal="0" DataType="System.String" SqlType="varchar" Len="2" Nullable="F" IsPrKey="T" ColAttrib="PK" />
+    <Column ColName="Name" ColOrdinal="1" DataType="System.String" SqlType="varchar" Len="50" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+  </SqlInterface>
+  <SqlInterface GetRowsProc="dbo.GetUSPrimaryLocByZip" DbRowsClassName="US_PriZipCodes" DbRowClassName="US_PriZipCode" PrimaryTable="dbo.US_Zipcodes" InsertRowProc="InsertUS_ZipCode" DeleteRowProc="DeleteUS_ZipCode" GetRowsProcExists="T" InsertRowProcExists="F" DeleteRowProcExists="F">
+    <Column ColName="ZipID" ColOrdinal="0" DataType="System.Int32" SqlType="int" Len="4" Nullable="T" IsPrKey="T" ColAttrib="AI" />
+    <Column ColName="Zipcode" ColOrdinal="1" DataType="System.String" SqlType="varchar" Len="12" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="City" ColOrdinal="2" DataType="System.String" SqlType="varchar" Len="50" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="State" ColOrdinal="3" DataType="System.String" SqlType="varchar" Len="2" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+  </SqlInterface>
+  <SqlInterface GetRowsProc="dbo.GetUSAcceptableLocByZip" DbRowsClassName="US_AccZipCodes" DbRowClassName="US_AccZipCode" PrimaryTable="dbo.US_Zipcodes" InsertRowProc="InsertUS_ZipCode" DeleteRowProc="DeleteUS_ZipCode" GetRowsProcExists="T" InsertRowProcExists="F" DeleteRowProcExists="F">
+    <Column ColName="ZipID" ColOrdinal="0" DataType="System.Int32" SqlType="int" Len="4" Nullable="T" IsPrKey="T" ColAttrib="AI" />
+    <Column ColName="Zipcode" ColOrdinal="1" DataType="System.String" SqlType="varchar" Len="12" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="City" ColOrdinal="2" DataType="System.String" SqlType="varchar" Len="50" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="State" ColOrdinal="3" DataType="System.String" SqlType="varchar" Len="2" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+  </SqlInterface>
+  <SqlInterface GetRowsProc="dbo.GetZipForUniqueCityState" DbRowsClassName="US_ZipsForUniqueCityStates" DbRowClassName="US_ZipForUniqueCityState" PrimaryTable="dbo.US_Zipcodes" InsertRowProc="InsertUS_ZipCode" DeleteRowProc="DeleteUS_ZipCode" GetRowsProcExists="T" InsertRowProcExists="F" DeleteRowProcExists="F">
+    <Column ColName="ZipID" ColOrdinal="0" DataType="System.Int32" SqlType="int" Len="4" Nullable="F" IsPrKey="T" ColAttrib="AI" />
+    <Column ColName="Zipcode" ColOrdinal="1" DataType="System.String" SqlType="varchar" Len="12" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="City" ColOrdinal="2" DataType="System.String" SqlType="varchar" Len="50" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="State" ColOrdinal="3" DataType="System.String" SqlType="varchar" Len="2" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+  </SqlInterface>
+  <SqlInterface GetRowsProc="dbo.GetZipsWithUniqueCityState" DbRowsClassName="US_ZipsWithUniqueCityStates" DbRowClassName="US_ZipWithUniqueCityState" PrimaryTable="dbo.US_Zipcodes" InsertRowProc="InsertUS_ZipCode" DeleteRowProc="DeleteUS_ZipCode" GetRowsProcExists="T" InsertRowProcExists="F" DeleteRowProcExists="F">
+    <Column ColName="ZipID" ColOrdinal="0" DataType="System.Int32" SqlType="int" Len="4" Nullable="F" IsPrKey="T" ColAttrib="AI" />
+    <Column ColName="Zipcode" ColOrdinal="1" DataType="System.String" SqlType="varchar" Len="12" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="City" ColOrdinal="2" DataType="System.String" SqlType="varchar" Len="50" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="State" ColOrdinal="3" DataType="System.String" SqlType="varchar" Len="2" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+  </SqlInterface>
+  <SqlInterface GetRowsProc="dbo.GetUSMilitaryLocByZip" DbRowsClassName="US_MilZipCodes" DbRowClassName="US_MilZipCode" PrimaryTable="dbo.US_Zipcodes" InsertRowProc="InsertUS_ZipCode" DeleteRowProc="DeleteUS_ZipCode" GetRowsProcExists="T" InsertRowProcExists="F" DeleteRowProcExists="F">
+    <Column ColName="ZipID" ColOrdinal="0" DataType="System.Int32" SqlType="int" Len="4" Nullable="T" IsPrKey="T" ColAttrib="AI" />
+    <Column ColName="Zipcode" ColOrdinal="1" DataType="System.String" SqlType="varchar" Len="12" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="City" ColOrdinal="2" DataType="System.String" SqlType="varchar" Len="50" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="State" ColOrdinal="3" DataType="System.String" SqlType="varchar" Len="2" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+  </SqlInterface>
+  <SqlInterface GetRowsProc="dbo.GetSpecialCompanyNames" DbRowsClassName="SpecialCoNames" DbRowClassName="SpecialCoName" PrimaryTable="dbo.SpecialCompanyNames" InsertRowProc="InsertSpecialCoName" DeleteRowProc="DeleteSpecialCoName" GetRowsProcExists="T" InsertRowProcExists="F" DeleteRowProcExists="F">
+    <Column ColName="CompanyName" ColOrdinal="0" DataType="System.String" SqlType="varchar" Len="60" Nullable="F" IsPrKey="T" ColAttrib="PK" />
+  </SqlInterface>
+  <SqlInterface GetRowsProc="dbo.GetCommonBusWords" DbRowsClassName="CommonBusWords" DbRowClassName="CommonBusWord" PrimaryTable="dbo.CommonBusinessWords" InsertRowProc="InsertCommonBusWord" DeleteRowProc="DeleteCommonBusWord" GetRowsProcExists="T" InsertRowProcExists="F" DeleteRowProcExists="F">
+    <Column ColName="BusWord" ColOrdinal="0" DataType="System.String" SqlType="varchar" Len="50" Nullable="F" IsPrKey="T" ColAttrib="PK" />
+  </SqlInterface>
+  <SqlInterface GetRowsProc="dbo.GetCommonFirstNames" DbRowsClassName="CommonFirstNames" DbRowClassName="CommonFirstName" PrimaryTable="dbo.CommonFirstNames" InsertRowProc="InsertCommonFirstName" DeleteRowProc="DeleteCommonBusinessWord" GetRowsProcExists="T" InsertRowProcExists="F" DeleteRowProcExists="F">
+    <Column ColName="FName" ColOrdinal="0" DataType="System.String" SqlType="varchar" Len="50" Nullable="F" IsPrKey="T" ColAttrib="PK" />
+  </SqlInterface>
+  <SqlInterface GetRowsProc="dbo.GetSpecialPersonalNames" DbRowsClassName="SpecialPersonalNames" DbRowClassName="SpecialPersonalName" PrimaryTable="dbo.SpecialPersonalNames" InsertRowProc="InsertSpecialName" DeleteRowProc="DeleteSpecialName" GetRowsProcExists="T" InsertRowProcExists="F" DeleteRowProcExists="F">
+    <Column ColName="PersonName" ColOrdinal="0" DataType="System.String" SqlType="varchar" Len="60" Nullable="F" IsPrKey="T" ColAttrib="PK" />
+  </SqlInterface>
+  <SqlInterface GetRowsProc="dbo.GetCompanyNameFixes" DbRowsClassName="CompanyNameFixes" DbRowClassName="CompanyNameFix" PrimaryTable="dbo.CompanyNameFixes" InsertRowProc="InsertCoNameFix" DeleteRowProc="DeleteCoNameFix" GetRowsProcExists="T" InsertRowProcExists="F" DeleteRowProcExists="F">
+    <Column ColName="AcctNum" ColOrdinal="0" DataType="System.Int32" SqlType="int" Len="4" Nullable="F" IsPrKey="T" ColAttrib="PK" />
+    <Column ColName="OldCompanyName" ColOrdinal="1" DataType="System.String" SqlType="varchar" Len="60" Nullable="F" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="NewCompanyName" ColOrdinal="2" DataType="System.String" SqlType="varchar" Len="60" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+  </SqlInterface>
+  <SqlInterface GetRowsProc="dbo.GetCompanySites" DbRowsClassName="CompanySites" DbRowClassName="CompanySite" PrimaryTable="dbo.CompanySites" InsertRowProc="InsertCompanySite" DeleteRowProc="DeleteCompanySite" GetRowsProcExists="T" InsertRowProcExists="T" DeleteRowProcExists="T">
+    <IParam ParamName="@CompanyName" ParamType="VarChar" ParamLen="60" Direction="Input" Nullable="F" DataColName="CompanyName" />
+    <IParam ParamName="@Site" ParamType="VarChar" ParamLen="50" Direction="Input" Nullable="F" DataColName="Site" />
+    <IParam ParamName="@Addr1" ParamType="VarChar" ParamLen="50" Direction="Input" Nullable="F" DataColName="Addr1" />
+    <IParam ParamName="@Addr2" ParamType="VarChar" ParamLen="50" Direction="Input" Nullable="F" DataColName="Addr2" />
+    <IParam ParamName="@City" ParamType="VarChar" ParamLen="30" Direction="Input" Nullable="F" DataColName="City" />
+    <IParam ParamName="@State" ParamType="VarChar" ParamLen="2" Direction="Input" Nullable="F" DataColName="State" />
+    <IParam ParamName="@Zip" ParamType="VarChar" ParamLen="20" Direction="Input" Nullable="F" DataColName="Zip" />
+    <DParam ParamName="@ID" ParamType="Int" ParamLen="0" Direction="Input" Nullable="F" DataColName="ID" />
+    <Column ColName="ID" ColOrdinal="0" DataType="System.Int32" SqlType="int" Len="4" Nullable="F" IsPrKey="T" ColAttrib="AI" />
+    <Column ColName="CompanyName" ColOrdinal="1" DataType="System.String" SqlType="varchar" Len="60" Nullable="F" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="Site" ColOrdinal="2" DataType="System.String" SqlType="varchar" Len="50" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="Addr1" ColOrdinal="3" DataType="System.String" SqlType="varchar" Len="50" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="Addr2" ColOrdinal="4" DataType="System.String" SqlType="varchar" Len="50" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="City" ColOrdinal="5" DataType="System.String" SqlType="varchar" Len="30" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="State" ColOrdinal="6" DataType="System.String" SqlType="varchar" Len="2" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+    <Column ColName="Zip" ColOrdinal="7" DataType="System.String" SqlType="varchar" Len="20" Nullable="T" IsPrKey="F" ColAttrib="RW" />
+  </SqlInterface>
+</SqlInterfaceDefs>

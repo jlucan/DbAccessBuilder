@@ -1,0 +1,524 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Xml;
+using System.Data;
+using System.Data.SqlClient;
+
+namespace SqlDbAccess
+{
+
+    //=============================================================================================
+    // This class functions primarily as a container for a list of objects that inherit from DbRow.
+    //=============================================================================================
+
+    // NOTE: This is automatically generated code. If you change it, your changes will be lost if this
+    // code is regenerated. A better approach is to add a partial class with the same name in a different
+    // code module and add new properties or methods to it.
+
+    public partial class NewCustomers : DbRows, IEnumerable<NewCustomer>
+    {
+        protected static readonly string PrimaryTableName = "dbo.TempCustomer";
+        protected List<NewCustomer> DbRowList = null;
+
+        /// <summary>
+        ///  Class factory method that returns a new NewCustomers object with its List of NewCustomer's filled with data.
+        ///  Returns null on error.
+        /// </summary>
+        public static NewCustomers CreateNewCustomers(out string errMsg)
+        {
+            NewCustomers _dbrows = new NewCustomers();
+            if (_dbrows.getData(out errMsg) == null) return null;
+            return _dbrows;
+        }
+
+        /// <summary>
+        /// Returns a generic list of database row objects as read from the database.
+        /// </summary>
+        public List<NewCustomer> getData(out string errMsg)
+        {
+            errMsg = null;
+            if (this.DbRowList == null)
+                this.DbRowList = new List<NewCustomer>();
+            else
+                this.DbRowList.Clear();
+            SqlConnection sqlConn = DbAccess.GetSqlConn();
+            if (sqlConn != null)
+            {
+                using (sqlConn)
+                {
+                    try
+                    {
+                        SqlCommand sqlCmd = new SqlCommand("dbo.Get_SA_NewCustomers", sqlConn);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
+                        sqlConn.Open();
+                        SqlDataReader sqlRdr = sqlCmd.ExecuteReader();
+                        while (sqlRdr.Read())
+                        {
+                            DbRowList.Add(new NewCustomer(this, sqlRdr));
+                        }
+                        return this.DbRowList;
+                    }
+                    catch (DbAccessException dbaexc)
+                    {
+                        errMsg = dbaexc.Message;
+                    }
+                    catch (Exception exc)
+                    {
+                        errMsg = String.Format("Error reading data from {0}. Reason: {1}", PrimaryTableName, exc.Message);
+                    }
+                }
+            }
+            else
+            {
+                errMsg = String.Format("Error accessing {0}. Reason:\nUnable to get database connection object. Possibly, could not determine a valid database connection string,", PrimaryTableName);
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Returns a count of contained DbRow objects.
+        /// </summary>
+        public int Count { get { return this.DbRowList == null ? 0 : this.DbRowList.Count; } }
+
+        /// <summary>
+        /// Adds a new NewCustomer object to this class's contained list.
+        /// </summary>
+        public void AddNewCustomer(NewCustomer dbRow)
+        {
+            DbRowList.Add(dbRow);
+        }
+
+        /// <summary>
+        /// Finds a Project in the this class's contained list.
+        /// Returns null on error.
+        /// </summary>
+        public NewCustomer FindNewCustomerByPrKey(out string errMsg, int acctNum)
+        {
+            if (this.DbRowList == null)
+            {
+                errMsg = "The NewCustomer list has not been initialized.";
+                return null;
+            }
+            NewCustomer _dbRow = this.DbRowList.Find(delegate(NewCustomer x) { return (x.AcctNum == acctNum); });
+            errMsg = (_dbRow == null) ? "FindNewCustomerByPrKey could not find a NewCustomer with the specified primary key." : null;
+            return _dbRow;
+        }
+
+        /// <summary>
+        /// Creates a new database row object with non-identity primary keys initialized with the  passed parameters and adds it to the list of database records this object contains.
+        /// Row object can be modified and saved to the database using the updateDatabase method.
+        /// </summary>
+        public NewCustomer AddNewNewCustomer(out string errMsg, int acctNum)
+        {
+            try
+            {
+                NewCustomer rowObj = new NewCustomer(acctNum, false);
+                if (this.DbRowList == null)
+                    this.DbRowList = new List<NewCustomer>();
+                this.DbRowList.Add(rowObj);
+                errMsg = null;
+                return rowObj;
+            }
+            catch (Exception exc)
+            {
+                errMsg = "Error creating new NewCustomer row object - " + exc.Message;
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Deletes a database record and removes it from the list of database records this object contains.
+        /// Returns false on error.
+        /// </summary>
+        public bool RemoveAndDeleteNewCustomerByPrKey(out string errMsg, int acctNum)
+        {
+            NewCustomer dbRow = this.FindNewCustomerByPrKey(out errMsg, acctNum);
+            if (dbRow == null)
+            {
+                errMsg = "Error removing NewCustomer - a NewCustomer with the specified primary key was not found in the contained NewCustomers list.";
+                return false;
+            }
+            this.DbRowList.Remove(dbRow);
+            return DeleteNewCustomerByPrKey(out errMsg, acctNum);
+        }
+
+        /// <summary>
+        /// Updates the database for each NewCustomer row that has been modified.
+        /// Returns false on error.
+        /// </summary>
+        public bool updateDatabase(out string errMsg)
+        {
+            errMsg = null;
+            if (this.DbRowList != null && this.DbRowList.Count > 0)
+            {
+                foreach (NewCustomer dbr in this.DbRowList)
+                {
+                    if (dbr.Modified)
+                    {
+                        if (!dbr.updateDatabase(out errMsg)) return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Static method that deletes a database record.
+        /// Returns false on error.
+        /// </summary>
+        public static bool DeleteNewCustomerByPrKey(out string errMsg, int acctNum)
+        {
+            errMsg = null;
+            SqlConnection sqlConn = DbAccess.GetSqlConn();
+            if (sqlConn != null)
+            {
+                using (sqlConn)
+                {
+                    try
+                    {
+                        SqlCommand sqlCmd = new SqlCommand("DeleteNewCustomer", sqlConn);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
+                        sqlCmd.Parameters.Add("@AcctNum", SqlDbType.Int, 4).Value = acctNum;
+                        sqlConn.Open();
+                        int nRows = sqlCmd.ExecuteNonQuery();
+                    }
+                    catch (DbAccessException dbaexc)
+                    {
+                        errMsg = dbaexc.Message;
+                        return false;
+                    }
+                    catch (Exception exc)
+                    {
+                        errMsg = String.Format("Error deleting a row from {0}. Reason: {1}", PrimaryTableName, exc.Message);
+                        return false;
+                    }
+                }
+            }
+            else
+            {
+                errMsg = String.Format("Error accessing {0}. Reason:\nUnable to get database connection object. Possibly, could not determine a valid database connection string,", PrimaryTableName);
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Static method that checks for the existence of a database row by it's primary key.
+        /// Returns false on error.
+        /// </summary>
+        public static bool CheckNewCustomerExists(out string errMsg, out bool exists, int acctNum)
+        {
+            return CheckClientContactExists(out errMsg, out exists, "AcctNum", acctNum);
+        }
+
+        /// <summary>
+        /// Static method that checks for the existence of a database row by up to four columns and their contents .
+        /// Returns false on error.
+        /// </summary>
+        public static bool CheckClientContactExists(out string errMsg, out bool exists, string col1, object val1, string col2 = null, object val2 = null, string col3 = null, object val3 = null, string col4 = null, object val4 = null)
+        {
+            return DbAccess.CheckRowExists(out errMsg, out exists, PrimaryTableName, col1, val1, col2, val2, col3, val3, col4, val4);
+        }
+
+        // Implement an indexer into the contained list
+        public NewCustomer this[int index]
+        {
+            get { return this.DbRowList == null ? null : this.DbRowList[index]; }
+        }
+
+        // Implement the IEnumerable interface
+        public IEnumerator<NewCustomer> GetEnumerator() { return this.DbRowList.GetEnumerator(); }
+        IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
+    }
+
+    //=========================================================================
+    // This class represents one row from a result set generated by a stored procedure
+    //=========================================================================
+
+    public partial class NewCustomer : DbRow
+    {
+
+        // A list of fields and their attributes contained in the NewCustomer type
+        // AcctNum, int, 4, not null, PK
+        // CompanyName, string, 60, null, RW
+        // NewAddr1, string, 50, null, RW
+        // NewAddr2, string, 50, null, RW
+        // NewCity, string, 30, null, RW
+        // NewState, string, 10, null, RW
+        // NewZip, string, 20, null, RW
+        // NewCountry, string, 50, null, RW
+        // NewPhone, string, 20, null, RW
+        // add1, string, 30, null, RW
+        // add2, string, 30, null, RW
+        // city, string, 30, null, RW
+        // St, string, 10, null, RW
+        // Zip, string, 10, null, RW
+        // Country, string, 20, null, RW
+        // Phone, string, 12, null, RW
+        // AcctNumRefs, int, 4, not null, RW
+        // NameRefs, int, 4, not null, RW
+        // NameType, int, 4, not null, RW
+
+        /// <summary>
+        /// Static factory method that creates a new database row object with non-identity primary keys initialized with the passed parameters.
+        /// Non primary key columns that are not read-only and not nullable need to be set before saving to the database.
+        /// The new row object can be modified and saved to the database using the object's updateDatabase method.
+        /// </summary>
+        public static NewCustomer CreateNewNewCustomer(out string errMsg, int acctNum)
+        {
+            try
+            {
+                NewCustomer rowObj = new NewCustomer(acctNum, false);
+                errMsg = null;
+                return rowObj;
+            }
+            catch (Exception exc)
+            {
+                errMsg = "Error creating new NewCustomer row object - " + exc.Message;
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Static method that returns the database row object that contains the passed primary key.
+        /// Returns null on error.
+        /// </summary>
+        public static NewCustomer GetNewCustomerByPrimaryKey(out string errMsg, int acctNum)
+        {
+            errMsg = null;
+            try
+            {
+                return new NewCustomer(acctNum, true);
+            }
+            catch (DbAccessException dbaexc)
+            {
+                errMsg = dbaexc.Message;
+                return null;
+            }
+            catch (Exception exc)
+            {
+                errMsg = String.Format("Error getting a data row object from {0}. Reason: {1}", PrimaryTableName, exc.Message);
+                return null;
+            }
+        }
+
+        // Static and constant definitions
+        protected static readonly string PrimaryTableName = "dbo.TempCustomer";
+
+        // This is a collection of static definitions that provide a more descriptive name to the ordinal value assigned to a column
+        // NOTE - CHANGING THESE VALUES COULD HAVE DISASTEROUS CONSEQUENCES
+        public static readonly int ColIdx_AcctNum = 0;
+        public static readonly int ColIdx_CompanyName = 1;
+        public static readonly int ColIdx_NewAddr1 = 2;
+        public static readonly int ColIdx_NewAddr2 = 3;
+        public static readonly int ColIdx_NewCity = 4;
+        public static readonly int ColIdx_NewState = 5;
+        public static readonly int ColIdx_NewZip = 6;
+        public static readonly int ColIdx_NewCountry = 7;
+        public static readonly int ColIdx_NewPhone = 8;
+        public static readonly int ColIdx_add1 = 9;
+        public static readonly int ColIdx_add2 = 10;
+        public static readonly int ColIdx_city = 11;
+        public static readonly int ColIdx_St = 12;
+        public static readonly int ColIdx_Zip = 13;
+        public static readonly int ColIdx_Country = 14;
+        public static readonly int ColIdx_Phone = 15;
+        public static readonly int ColIdx_AcctNumRefs = 16;
+        public static readonly int ColIdx_NameRefs = 17;
+        public static readonly int ColIdx_NameType = 18;
+
+        // Defines a table of column attributes of a row from the result set used to create this object
+        public static ColumnAttributes[] ColAttributes =
+        {
+            new ColumnAttributes(0, "AcctNum", SqlDbType.Int, 4),
+            new ColumnAttributes(1, "CompanyName", SqlDbType.VarChar, 60),
+            new ColumnAttributes(2, "NewAddr1", SqlDbType.VarChar, 50),
+            new ColumnAttributes(3, "NewAddr2", SqlDbType.VarChar, 50),
+            new ColumnAttributes(4, "NewCity", SqlDbType.VarChar, 30),
+            new ColumnAttributes(5, "NewState", SqlDbType.VarChar, 10),
+            new ColumnAttributes(6, "NewZip", SqlDbType.VarChar, 20),
+            new ColumnAttributes(7, "NewCountry", SqlDbType.VarChar, 50),
+            new ColumnAttributes(8, "NewPhone", SqlDbType.VarChar, 20),
+            new ColumnAttributes(9, "add1", SqlDbType.VarChar, 30),
+            new ColumnAttributes(10, "add2", SqlDbType.VarChar, 30),
+            new ColumnAttributes(11, "city", SqlDbType.VarChar, 30),
+            new ColumnAttributes(12, "St", SqlDbType.VarChar, 10),
+            new ColumnAttributes(13, "Zip", SqlDbType.VarChar, 10),
+            new ColumnAttributes(14, "Country", SqlDbType.VarChar, 20),
+            new ColumnAttributes(15, "Phone", SqlDbType.VarChar, 12),
+            new ColumnAttributes(16, "AcctNumRefs", SqlDbType.Int, 4),
+            new ColumnAttributes(17, "NameRefs", SqlDbType.Int, 4),
+            new ColumnAttributes(18, "NameType", SqlDbType.Int, 4)
+        };
+
+        // Properties or Methods that return various row or column attributes
+        protected override string PrimaryDatabaseTable { get { return PrimaryTableName; } }
+
+        public override string getColumnNameFromIdx(int colIdx)
+        {
+            return ColAttributes[colIdx].ColName;
+        }
+
+        public override SqlDbType getColumnSqlTypeFromIdx(int colIdx)
+        {
+            return ColAttributes[colIdx].SqlType;
+        }
+
+        public override int? getColumnSqlLenFromIdx(int colIdx)
+        {
+            return ColAttributes[colIdx].SqlLen;
+        }
+
+        //=================================
+        // Constructors
+        //=================================
+
+        // This constructor reads a row from the database if it is passed an sql reader reference, or a new blank row otherwise.
+        // The first parameter is the index of a column name in as defined above.  It also serves as the index of the column.
+        // * THE NUMBER OF AND ORDER OF COLUMNS IN "datafields" MUST EXACTLY MATCH THE NUMBER AND ORDER OF THE DATABASE COLUMN ENUMERATION ABOVE *
+        public NewCustomer(DbRows dbRows, SqlDataReader sqlRdr)
+            : base((sqlRdr == null))        // Sets 'IsNewRow' flag to true if no sqlRdr (no data read from database)
+        {
+            this.DbRows = dbRows;
+            this.dataFields = new DbColumn[]
+            {
+                new DbColInt(ColIdx_AcctNum, this, sqlRdr, DbColumn.ColAttrib.PrKey),
+                new DbColStringNull(ColIdx_CompanyName, this, sqlRdr, DbColumn.ColAttrib.ReadWrite),
+                new DbColStringNull(ColIdx_NewAddr1, this, sqlRdr, DbColumn.ColAttrib.ReadWrite),
+                new DbColStringNull(ColIdx_NewAddr2, this, sqlRdr, DbColumn.ColAttrib.ReadWrite),
+                new DbColStringNull(ColIdx_NewCity, this, sqlRdr, DbColumn.ColAttrib.ReadWrite),
+                new DbColStringNull(ColIdx_NewState, this, sqlRdr, DbColumn.ColAttrib.ReadWrite),
+                new DbColStringNull(ColIdx_NewZip, this, sqlRdr, DbColumn.ColAttrib.ReadWrite),
+                new DbColStringNull(ColIdx_NewCountry, this, sqlRdr, DbColumn.ColAttrib.ReadWrite),
+                new DbColStringNull(ColIdx_NewPhone, this, sqlRdr, DbColumn.ColAttrib.ReadWrite),
+                new DbColStringNull(ColIdx_add1, this, sqlRdr, DbColumn.ColAttrib.ReadWrite),
+                new DbColStringNull(ColIdx_add2, this, sqlRdr, DbColumn.ColAttrib.ReadWrite),
+                new DbColStringNull(ColIdx_city, this, sqlRdr, DbColumn.ColAttrib.ReadWrite),
+                new DbColStringNull(ColIdx_St, this, sqlRdr, DbColumn.ColAttrib.ReadWrite),
+                new DbColStringNull(ColIdx_Zip, this, sqlRdr, DbColumn.ColAttrib.ReadWrite),
+                new DbColStringNull(ColIdx_Country, this, sqlRdr, DbColumn.ColAttrib.ReadWrite),
+                new DbColStringNull(ColIdx_Phone, this, sqlRdr, DbColumn.ColAttrib.ReadWrite),
+                new DbColInt(ColIdx_AcctNumRefs, this, sqlRdr, DbColumn.ColAttrib.ReadWrite),
+                new DbColInt(ColIdx_NameRefs, this, sqlRdr, DbColumn.ColAttrib.ReadWrite),
+                new DbColInt(ColIdx_NameType, this, sqlRdr, DbColumn.ColAttrib.ReadWrite)
+            };
+        }
+
+        // Creates a new blank row that is not attached to a DbRows collection
+        public NewCustomer()
+            : this(null, null)
+        {
+            this.IsNewRow = true;
+        }
+
+        // Creates a new row that is not attached to a DbRows container
+        // IF the 'getRowData param is true, the row is then filled with data using the passed primary key value
+        public NewCustomer(int acctNum, bool getRowData)
+            : this(null, null)
+        {
+            ((DbColInt)dataFields[ColIdx_AcctNum]).initValue(acctNum);
+            if (getRowData)
+            {
+                this.IsNewRow = false;
+                string errMsg;
+                if (!this.refreshData(out errMsg))       // Read data from database
+                    throw new DbAccessException(errMsg);
+            }
+        }
+
+        //=================================
+        // Data field properties
+        //=================================
+
+        public int AcctNum { get { return ((DbColInt)dataFields[ColIdx_AcctNum]).Value; } }
+        public string CompanyName { get { return ((DbColStringNull)dataFields[ColIdx_CompanyName]).Value; } set { ((DbColStringNull)dataFields[ColIdx_CompanyName]).Value = value; } }
+        public string NewAddr1 { get { return ((DbColStringNull)dataFields[ColIdx_NewAddr1]).Value; } set { ((DbColStringNull)dataFields[ColIdx_NewAddr1]).Value = value; } }
+        public string NewAddr2 { get { return ((DbColStringNull)dataFields[ColIdx_NewAddr2]).Value; } set { ((DbColStringNull)dataFields[ColIdx_NewAddr2]).Value = value; } }
+        public string NewCity { get { return ((DbColStringNull)dataFields[ColIdx_NewCity]).Value; } set { ((DbColStringNull)dataFields[ColIdx_NewCity]).Value = value; } }
+        public string NewState { get { return ((DbColStringNull)dataFields[ColIdx_NewState]).Value; } set { ((DbColStringNull)dataFields[ColIdx_NewState]).Value = value; } }
+        public string NewZip { get { return ((DbColStringNull)dataFields[ColIdx_NewZip]).Value; } set { ((DbColStringNull)dataFields[ColIdx_NewZip]).Value = value; } }
+        public string NewCountry { get { return ((DbColStringNull)dataFields[ColIdx_NewCountry]).Value; } set { ((DbColStringNull)dataFields[ColIdx_NewCountry]).Value = value; } }
+        public string NewPhone { get { return ((DbColStringNull)dataFields[ColIdx_NewPhone]).Value; } set { ((DbColStringNull)dataFields[ColIdx_NewPhone]).Value = value; } }
+        public string add1 { get { return ((DbColStringNull)dataFields[ColIdx_add1]).Value; } set { ((DbColStringNull)dataFields[ColIdx_add1]).Value = value; } }
+        public string add2 { get { return ((DbColStringNull)dataFields[ColIdx_add2]).Value; } set { ((DbColStringNull)dataFields[ColIdx_add2]).Value = value; } }
+        public string city { get { return ((DbColStringNull)dataFields[ColIdx_city]).Value; } set { ((DbColStringNull)dataFields[ColIdx_city]).Value = value; } }
+        public string St { get { return ((DbColStringNull)dataFields[ColIdx_St]).Value; } set { ((DbColStringNull)dataFields[ColIdx_St]).Value = value; } }
+        public string Zip { get { return ((DbColStringNull)dataFields[ColIdx_Zip]).Value; } set { ((DbColStringNull)dataFields[ColIdx_Zip]).Value = value; } }
+        public string Country { get { return ((DbColStringNull)dataFields[ColIdx_Country]).Value; } set { ((DbColStringNull)dataFields[ColIdx_Country]).Value = value; } }
+        public string Phone { get { return ((DbColStringNull)dataFields[ColIdx_Phone]).Value; } set { ((DbColStringNull)dataFields[ColIdx_Phone]).Value = value; } }
+        public int AcctNumRefs { get { return ((DbColInt)dataFields[ColIdx_AcctNumRefs]).Value; } set { ((DbColInt)dataFields[ColIdx_AcctNumRefs]).Value = value; } }
+        public int NameRefs { get { return ((DbColInt)dataFields[ColIdx_NameRefs]).Value; } set { ((DbColInt)dataFields[ColIdx_NameRefs]).Value = value; } }
+        public int NameType { get { return ((DbColInt)dataFields[ColIdx_NameType]).Value; } set { ((DbColInt)dataFields[ColIdx_NameType]).Value = value; } }
+
+        // Provide for special cases where a read only field needs to be initialized
+        public void initColValue(string colName, object value)
+        {
+            switch (colName)
+            {
+            }
+        }
+
+        //=================================
+        // Insert a new database row
+        //=================================
+
+        // The insertNewRow method is called by the updateDatabase method in DbRow which is a base class to this class.
+        // It only inserts non nullable columns when creating a new record. Nullable columns are then updated with an update operation.
+        protected override bool insertNewRow(out string errMsg)
+        {
+        errMsg = "System Error - There is either not an insert row procedure specified or it has been specified incorrectly. Please correct and regenerate this code.";
+        return false;
+
+            // Make sure that this is intended to be a new row and that there is the required content in primary key columns
+            if (!this.IsNewRow)
+            {
+                errMsg = "System Error - attempt to insert a new database row from an object that does not represent a new database row.";
+                return false;
+            }
+            if (!this.dataFields[ColIdx_AcctNum].modified)
+            {
+                errMsg = String.Format("Cannot insert new {0} row - one or more primary key columns has not been set.", PrimaryTableName);
+                return false;
+            }
+            SqlCommand sqlCmd = new SqlCommand("InsertNewCustomer");
+            sqlCmd.CommandType = CommandType.StoredProcedure;
+            if (!execInsertCmd(sqlCmd, out errMsg)) return false;
+
+            // Reset modified flags for columns already written to database
+            errMsg = null;
+            return true;
+        }
+
+        //======================================
+        // Refresh row data from the database
+        //======================================
+
+        // The RefreshData method fills this record with current data from the database
+        // It uses the same stored procedure as that used to read all records except that the primary key for the record is supplied.
+        // The stored procedure is written so that when a primary key is not supplied all active records are returned
+        public bool refreshData(out string errMsg)
+        {
+            if (this.IsNewRow)
+            {
+                errMsg = "System error - the refresh data method cannot be called on a new row that has not yet been commited to the database.";
+                return false;
+            }
+            SqlCommand sqlCmd = new SqlCommand("dbo.Get_SA_NewCustomers");
+            sqlCmd.CommandType = CommandType.StoredProcedure;
+            sqlCmd.Parameters.Add("@AcctNum", SqlDbType.Int, 4).Value = this.AcctNum;
+            try
+            {
+                refreshRowsData(sqlCmd);
+            }
+            catch (DbAccessException dbaexc)
+            {
+                errMsg = "Error refreshing NewCustomers record from database. Reason:\n" + dbaexc.Message;
+                return false;
+            }
+            errMsg = null;
+            return true;
+        }
+    }
+}        // End of namspace
