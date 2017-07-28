@@ -11,7 +11,7 @@ Key features:
 • Generates final result in three phases.
 • Phase 1 generates initial editable XML configuration file containing database metadata.
 • Phase 2 generates editable XML file containing data on stored procedures that implement create, read and delete operations.
-• Phase 3 generates the final database access layer.
+• Phase 3 generates the final database access layer using XMl configuration and metadata from the database.
 
 The database access layer contains 2 classes for each database table accessed: One that represents a row in the table and one that represents a collection of rows. The collection class contains basic access methods and is also declared as a partial class so that more functionality can be easily added.
 
